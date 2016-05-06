@@ -5,8 +5,10 @@
   "main": "server.js",
   "dependencies": {
     "dotenv": "^2.0.0",
-    "express": "^3.21.2",
-    "mongoose": "^4.4.14"
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.14",
+    "mongoose-auto-increment": "^5.0.1"
   },
   "devDependencies": {},
   "scripts": {

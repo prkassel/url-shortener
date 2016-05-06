@@ -1,15 +1,20 @@
 var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
-require('dotenv').load();
-
-mongoose.connect(process.env.MONGO_URI);
-
+var newUrl = require('./app/new');
+var url = require('./app/url');
 var port = process.env.PORT || 8080;
-
+app.set('view engine', 'ejs');
+app.set('views', './views');
 app.get('/', function(req, res) {
-  res.send('It works!');
+  res.render('index');
 });
+
+app.use(express.static('client'));
+
+app.use('/new', newUrl);
+app.use('/', url);
+
 app.listen(port,  function () {
 	console.log('Node.js listening on port ' + port + '...');
 });
