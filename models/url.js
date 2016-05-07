@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var autoIncrement = require('mongoose-auto-increment');
 
-var connect = mongoose.connect(process.env.MONGO_URI);
+var connect = mongoose.connect(process.env.MONGODB_URI);
 autoIncrement.initialize(connect);
 
 var urlSchema = new Schema({
