@@ -9,10 +9,15 @@ router.route('/').get(function(req, res) {
 router.route('/:id').get(function(req, res) {
     urlModel.findById(req.params.id, function(err, url) {
         if (err) {
-            res.json({error: err});
+            res.send(err);
         }
         else {
+            if (url) {
             res.redirect(url.original_url);
+            }
+            else {
+                res.send('Error, this is short url does not exist');
+            }
         }
     });
 });
