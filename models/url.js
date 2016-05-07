@@ -1,4 +1,4 @@
-//require('dotenv').load();
+require('dotenv').load();
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var autoIncrement = require('mongoose-auto-increment');
