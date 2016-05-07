@@ -1,3 +1,4 @@
+//uncomment for local deployment/commented out for heroku
 //require('dotenv').load();
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;

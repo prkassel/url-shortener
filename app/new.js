@@ -22,7 +22,7 @@ router.get('/:url', function(req, res) {
       if (err) {
           res.send(err);
       }
-      res.json({original_url: url.original_url, short_url: 'https://url-shortener-prkassel.c9users.io/' + url.id});
+      res.json({original_url: url.original_url, short_url: 'https://glacial-woodland-61643.herokuapp.com/' + url.id});
     });
     }
 });
