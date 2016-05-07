@@ -3,10 +3,11 @@ var router = express.Router();
 var urlModel = require('../models/url');
 
 router.get('/', function(req, res) {
-   res.send('url page!'); 
+  res.render('index');
 });
 
 router.get('/:id', function(req, res) {
+
     urlModel.findById(req.params.id, function(err, url) {
         if (err) {
             res.send(err);

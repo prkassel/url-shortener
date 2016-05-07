@@ -8,7 +8,8 @@
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "mongoose": "^4.4.14",
-    "mongoose-auto-increment": "^5.0.1"
+    "mongoose-auto-increment": "^5.0.1",
+    "validate.js": "^0.9.0"
   },
   "devDependencies": {},
   "scripts": {
