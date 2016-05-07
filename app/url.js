@@ -9,7 +9,7 @@ router.route('/').get(function(req, res) {
 router.route('/:id').get(function(req, res) {
     urlModel.findById(req.params.id, function(err, url) {
         if (err) {
-            res.send(err);
+            res.json({error: err});
         }
         else {
             res.redirect(url.original_url);
